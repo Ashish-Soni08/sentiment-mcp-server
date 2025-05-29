@@ -20,7 +20,7 @@ def sentiment_analysis(text: str) -> dict:
     }
 
 # Gradio Interface
-sentiment_analyzer = gr.Interface(
+demo = gr.Interface(
     fn=sentiment_analysis,
     inputs=gr.Textbox(placeholder="Enter text to analyze..."),
     outputs=gr.JSON(),
@@ -30,4 +30,4 @@ sentiment_analyzer = gr.Interface(
 
 # Launch the interface and MCP server
 if __name__ == "__main__":
-    sentiment_analyzer.launch(mcp_server=True)
+    demo.launch(mcp_server=True)
